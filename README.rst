@@ -4,6 +4,28 @@ django-require
 **django-require** is a Django staticfiles post-processor for optimizing
 with `RequireJS <http://requirejs.org/>`_.
 
+License
+-------
+
+This software:
+
+* was forked from https://github.com/edx/django-require,
+* which was forked from https://github.com/vtemian/django-require,
+* which was forked from https://github.com/etianen/django-require.
+
+All contribution made to those repositories, the last of which
+is tagged `final-bsd-3c-contribution`_, are licensed by the original
+contributors under the terms of the `BSD 3-Clause License`_.
+
+The software is now maintained for the purpose of the Open edX
+project by The Center for Reimagining Learning, which licenses
+any further contributions to this repository under the `Apache License 2.0`_.
+
+.. _final-bsd-3c-contribution: https://github.com/openedx/django-require/releases/tag/final-bsd-3c-contribution
+.. _Apache License 2.0: ./LICENSE
+.. _BSD 3-Clause License: ./LICENSE-BSD-3c
+
+
 Features
 --------
 
