@@ -1,11 +1,11 @@
 django-require
-==============
+##############
 
 **django-require** is a Django staticfiles post-processor for optimizing
 with `RequireJS <http://requirejs.org/>`_.
 
 License
--------
+*******
 
 This software:
 
@@ -27,7 +27,7 @@ any further contributions to this repository under the `Apache License 2.0`_.
 
 
 Features
---------
+********
 
 -  Optimize your static assets using the excellent r.js optimizer.
 -  Compile standalone modules using the
@@ -35,7 +35,7 @@ Features
 -  Compatible with any Django staticfiles storage backend.
 
 Installation
-------------
+************
 
 1. Checkout the latest django-require release and copy or symlink the
    ``require`` directory into your ``PYTHONPATH``.  If using pip, run
@@ -47,7 +47,7 @@ Installation
    ``'require.storage.OptimizedManifestStaticFilesStorage'``.
 
 Available settings
-------------------
+******************
 
 Available settings, and their default values, are shown below. You
 should configure this to match the layout of your project's static
@@ -87,7 +87,7 @@ RequireJS.
     REQUIRE_ENVIRONMENT = "auto"
 
 Generating require.js
----------------------
+*********************
 
 As a shortcut to downloading a copy of require.js from the internet, you
 can simply run the ``require_init`` management to copy a version of
@@ -99,7 +99,7 @@ your ``REQUIRE_BASE_URL`` and ``REQUIRE_JS`` settings.
     $ ./manage.py require_init
 
 Generating build profiles
--------------------------
+*************************
 
 In almost all cases, you'll want to create a custom build profile for
 your project. To help you get started, django-require can generate a
@@ -112,7 +112,7 @@ Any standalone modules that your specify with a build profile will also
 have a default build profile generated when you run this command.
 
 Running javascript modules in templates
----------------------------------------
+***************************************
 
 You can run javascript modules in templates by using the
 ``{% require_module %}`` template tag.
@@ -154,7 +154,7 @@ This template fragment would then render to something like:
     </html>
 
 Building standalone modules
----------------------------
+***************************
 
 As a further optimization to your code, you can build your modules to
 run independently of require.js, which can often speed up page load
@@ -178,7 +178,7 @@ To specify standalone modules, simply add them to your
     }
 
 Running the r.js optimizer
---------------------------
+**************************
 
 The r.js optimizer is run automatically whenever you call the
 ``collectstatic`` management command. The optimizer is run as a
@@ -200,7 +200,7 @@ the r.js optimizer:
    above.
 
 Creating your own optimizing storage classes
---------------------------------------------
+********************************************
 
 You can add r.js optimization to any Django staticfiles storage class by
 using the ``require.storage.OptimizedFilesMixin``. For example, to make
@@ -226,12 +226,12 @@ For ready-made storage classes that combine django-require with Amazon S3, check
 `django-require-s3 <https://github.com/etianen/django-require-s3>`_.
 
 Other projects extending django-require
----------------------------------------
+***************************************
 
 - `django-require-license <https://github.com/collab-project/django-require-license>`_ - prepends a license header to compressed file(s) generated with django-require
 
 Tests
------
+*****
 
 You can run the test suite from the root of the source checkout::
 
@@ -245,7 +245,7 @@ Test coverage reports can be generated from the same directory with::
 Open `htmlcov/index.html` in a browser to see the HTML coverage report.
 
 Support and announcements
--------------------------
+*************************
 
 Downloads and bug tracking can be found at the `main project
 website <http://github.com/etianen/django-require>`_.
@@ -255,7 +255,7 @@ You can keep up to date with the latest announcements by joining the
 group <http://groups.google.com/group/django-require>`_.
 
 More information
-----------------
+****************
 
 The django-require project was developed by Dave Hall. You can get the
 code from the `django-require project
