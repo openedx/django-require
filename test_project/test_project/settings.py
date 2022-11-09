@@ -10,6 +10,7 @@ https://docs.djangoproject.com/en/1.6/ref/settings/
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os, tempfile
+
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
 
@@ -65,7 +66,7 @@ STATICFILES_DIRS = (
     tempfile.mkdtemp(),
 )
 
-MIDDLEWARE_CLASSES = (
+MIDDLEWARE = (
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',

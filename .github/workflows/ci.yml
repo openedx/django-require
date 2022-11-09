@@ -15,14 +15,14 @@ jobs:
     strategy:
       matrix:
         os:
-          - ubuntu-18.04
-        python-version: [ 2.7,3.4,3.5,3.6 ]
-        toxenv: [ django-18,django-19,django-110,django-111 ]
+          - ubuntu-20.04
+        python-version: [3.8 ]
+        toxenv: [ py38-django32 ]
 
     steps:
-    - uses: actions/checkout@v1
+    - uses: actions/checkout@v2
     - name: setup python
-      uses: actions/setup-python@v2
+      uses: actions/setup-python@v3
       with:
         python-version: ${{ matrix.python-version }}
 
