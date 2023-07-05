@@ -58,7 +58,11 @@ INSTALLED_APPS = (
     'require',
 )
 
-STATICFILES_STORAGE = "require.storage.OptimizedStaticFilesStorage"
+STORAGES = {
+    "staticfiles": {
+        "BACKEND": "require.storage.OptimizedStaticFilesStorage",
+    },
+}
 
 STATIC_ROOT = tempfile.mkdtemp()
 
@@ -99,7 +103,6 @@ TIME_ZONE = 'UTC'
 
 USE_I18N = True
 
-USE_L10N = True
 
 USE_TZ = True
 
