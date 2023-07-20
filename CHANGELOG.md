@@ -1,7 +1,7 @@
 django-require changelog
 ========================
 
-1.1.0 - 05/06/2023
+2.1.0 - 20/07/2023
 -------------------
 
 * Support added for Django 4.2
