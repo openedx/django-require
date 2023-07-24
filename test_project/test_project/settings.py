@@ -58,7 +58,11 @@ INSTALLED_APPS = (
     'require',
 )
 
-STATICFILES_STORAGE = "require.storage.OptimizedStaticFilesStorage"
+STORAGES = {
+    "staticfiles": {
+        "BACKEND": "require.storage.OptimizedStaticFilesStorage",
+    },
+}
 
 STATIC_ROOT = tempfile.mkdtemp()
 
