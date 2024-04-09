@@ -1,6 +1,11 @@
 django-require changelog
 ========================
 
+2.2.0 - 09/04/2024
+-------------------
+
+* Support added for python3.11. Dropped support for django32.
+* 
 2.1.0 - 20/07/2023
 -------------------
 
