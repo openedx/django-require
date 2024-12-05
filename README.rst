@@ -1,8 +1,31 @@
-django-require
-##############
+openedx-django-require
+######################
+
+|pypi-badge| |ci-badge| |codecov-badge|
+
+.. |pypi-badge| image:: https://img.shields.io/pypi/v/openedx-django-require.svg
+    :target: https://pypi.python.org/project/openedx-django-require/
+    :alt: PyPI
+
+.. |ci-badge| image:: https://github.com/openedx/django-require/workflows/Python%20CI/badge.svg?branch=main
+    :target: https://github.com/openedx/django-require/actions
+    :alt: CI
+
+.. |codecov-badge| image:: https://codecov.io/github/openedx/django-require/coverage.svg?branch=main
+    :target: https://codecov.io/github/openedx/django-require?branch=main
+    :alt: Codecov
+
 
 **django-require** is a Django staticfiles post-processor for optimizing
 with `RequireJS <http://requirejs.org/>`_.
+
+*In the context of the Open edX project*, this django-require fork is used exclusively by
+legacy frontend code in `edx-platform <https://github.com/openedx/edx-platform>`_.
+That frontend code is all either replaced or in the process of being replaced.
+Once this process is complete, edx-platform will no longer need to
+install django-require, and this fork will be archived. As such, please
+consider this repository effectively deprecated and **do not use it in any
+new code**.
 
 License
 *******
@@ -18,13 +41,45 @@ is tagged `final-bsd-3c-contribution`_, are licensed by the original
 contributors under the terms of the `BSD 3-Clause License`_.
 
 The software is now maintained for the purpose of the Open edX
-project by The Center for Reimagining Learning, which licenses
+project by Axim Collaborative, Inc., which licenses
 any further contributions to this repository under the `Apache License 2.0`_.
 
 .. _final-bsd-3c-contribution: https://github.com/openedx/django-require/releases/tag/final-bsd-3c-contribution
 .. _Apache License 2.0: ./LICENSE
 .. _BSD 3-Clause License: ./LICENSE-BSD-3c
 
+Contributing
+************
+
+Bugfixes and routine maintenance contributions are very welcome.
+Please read `How To Contribute <https://openedx.org/r/how-to-contribute>`_ for details.
+Thank you!
+
+This repository is not accepting any new features nor refactors.
+
+The Open edX Code of Conduct
+****************************
+
+All community members are expected to follow the `Open edX Code of Conduct`_.
+
+.. _Open edX Code of Conduct: https://openedx.org/code-of-conduct/
+
+People
+******
+
+The assigned maintainers for this component and other project details may be
+found in `Backstage`_. Backstage pulls this data from the ``catalog-info.yaml``
+file in this repo.
+
+.. _Backstage: https://backstage.openedx.org/catalog/default/component/django-require
+
+Reporting Security Issues
+*************************
+
+Please do not report security issues in public. Please email security@openedx.org.
+
+django-require (Original Documentation)
+#######################################
 
 Features
 ********
