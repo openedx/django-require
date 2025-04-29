@@ -1,6 +1,6 @@
 from __future__ import unicode_literals
 
-from distutils.spawn import find_executable
+from shutil import which
 
 from django.utils.functional import cached_property
 
@@ -54,7 +54,7 @@ class AutoEnvironment(Environment):
         for environment in self.environments:
             environment = environment(self.env)
             executable = environment.args()[0]
-            if find_executable(executable):
+            if which(executable):
                 return environment
 
         raise EnvironmentError("no environments detected: {envs}".format(
