@@ -35,6 +35,7 @@ class RhinoEnvironment(Environment):
         # Start of the command to run the compiler in Java.
         return [
             "java",
+            "--add-exports", "java.base/sun.nio.ch=ALL-UNNAMED",
             "-Xss100M",
             "-classpath",
             ":".join((
