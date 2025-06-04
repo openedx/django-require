@@ -35,6 +35,9 @@ class RhinoEnvironment(Environment):
         # Start of the command to run the compiler in Java.
         return [
             "java",
+            # The `--add-exports` flag lets Rhino access Java’s internal
+            # `sun.nio.ch` package, which is restricted by default in
+            # Java 9+. Without it, file operations in Rhino fail.
             "--add-exports", "java.base/sun.nio.ch=ALL-UNNAMED",
             "-Xss100M",
             "-classpath",
