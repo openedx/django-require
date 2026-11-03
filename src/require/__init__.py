@@ -6,5 +6,6 @@ Developed by Dave Hall.
 <http://www.etianen.com/>
 """
 
+from importlib.metadata import version
 
-__version__ = (3, 0, 0)
+__version__ = version("openedx-django-require")

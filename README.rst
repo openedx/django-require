@@ -7,8 +7,8 @@ openedx-django-require
     :target: https://pypi.python.org/project/openedx-django-require/
     :alt: PyPI
 
-.. |ci-badge| image:: https://github.com/openedx/django-require/workflows/Python%20CI/badge.svg?branch=main
-    :target: https://github.com/openedx/django-require/actions
+.. |ci-badge| image:: https://github.com/openedx/django-require/actions/workflows/release.yml/badge.svg?branch=master
+    :target: https://github.com/openedx/django-require/actions/workflows/release.yml
     :alt: CI
 
 .. |codecov-badge| image:: https://codecov.io/github/openedx/django-require/coverage.svg?branch=main
