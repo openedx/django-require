@@ -6,7 +6,7 @@ build-backend = "setuptools.build_meta"
 name = "openedx-django-require"
 description = "A Django staticfiles post-processor for optimizing with RequireJS."
 requires-python = ">=3.11"
-license = "BSD-3-Clause"
+license = "Apache-2.0 AND BSD-3-Clause"
 license-files = ["LICENSE*"]
 authors = [
     {name = "Open edX Project", email = "oscm@openedx.org"},
@@ -71,7 +71,7 @@ allow_zero_version = true
 [tool.setuptools_scm]
 version_scheme = 'only-version'
 local_scheme = 'no-local-version'
-fallback_version = "0.0.0.dev0"
+fallback_version = "0.0.0"
 
 [tool.uv]
 constraint-dependencies = [
