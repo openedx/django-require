@@ -1,0 +1,95 @@
+[build-system]
+requires = ["setuptools", "setuptools-scm>8.1"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "openedx-django-require"
+description = "A Django staticfiles post-processor for optimizing with RequireJS."
+requires-python = ">=3.11"
+license = "Apache-2.0 AND BSD-3-Clause"
+license-files = ["LICENSE*"]
+authors = [
+    {name = "Open edX Project", email = "oscm@openedx.org"},
+]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Environment :: Web Environment",
+    "Framework :: Django",
+    "Framework :: Django :: 4.2",
+    "Intended Audience :: Developers",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Internet :: WWW/HTTP",
+]
+
+dynamic = ["readme", "version"]
+
+dependencies = []
+
+[project.urls]
+Homepage = "https://github.com/openedx/django-require"
+Repository = "https://github.com/openedx/django-require"
+
+[dependency-groups]
+test = [
+    "coverage",
+    "Django>=4.2,<5.0",
+]
+ci = [
+    "tox",
+    "tox-uv",
+]
+dev = [
+    {include-group = "test"},
+    {include-group = "ci"},
+]
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.dynamic]
+readme = {file = ["README.rst"], content-type = "text/x-rst"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+require = [
+    "resources/*.jar",
+    "resources/*.js",
+    "resources/tests/*.js",
+]
+
+[tool.semantic_release]
+build_command = "pip install build && SETUPTOOLS_SCM_PRETEND_VERSION=$NEW_VERSION python -m build"
+tag_format = "v{version}"
+major_on_zero = false
+allow_zero_version = true
+
+[tool.setuptools_scm]
+version_scheme = 'only-version'
+local_scheme = 'no-local-version'
+fallback_version = "0.0.0"
+
+[tool.uv]
+constraint-dependencies = [
+    "Django<6.0",
+    "elasticsearch<7.14.0",
+    "social-auth-app-django<6.0.0",
+    "social-auth-core<5.0.0",
+    "pip<26.2.1",
+]
+
+[tool.edx_lint]
+uv_constraints = []
+
+[tool.coverage.run]
+omit = [
+    "*/require/tests.py",
+    "test_project/*",
+]
+
+[tool.coverage.html]
+directory = "htmlcov"

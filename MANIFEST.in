@@ -1,5 +1,18 @@
-include require/resources/*.jar
-include require/resources/*.js
-include require/resources/tests/*.js
-include LICENSE
-include README.rst
+# Exclude development and test folders
+prune .github
+prune test_project
+
+# Exclude root level configuration and build files
+exclude Makefile
+exclude .gitignore
+exclude tox.ini
+exclude catalog-info.yaml
+
+# Exclude test/coverage artifacts
+prune htmlcov
+global-exclude .coverage
+global-exclude coverage.xml
+
+# Exclude dev/CI lockfile (pip never reads it during sdist install)
+exclude uv.lock
+exclude CHANGELOG.md
